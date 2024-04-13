@@ -1,95 +1,6 @@
-/*Обнуление*/
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-:focus,
-:active {
-  outline: none;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-html,
 body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  background: #252424;
 }
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*--------------------*/
-
 .title {
   margin-bottom: 105px;
   font-weight: 400;
@@ -102,6 +13,10 @@ h6 {
     font-size: 40px;
     margin-bottom: 97px;
   }
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .testimonials {
   margin-bottom: 243px;
@@ -126,4 +41,78 @@ h6 {
   @media (max-width: 998px) {
     gap: 16px;
   }
+}
+
+
+.cards__row {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+.cards__product {
+ 
+  max-width: 401px;
+  width: 100%;
+  background: #d9d9d9;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  
+}
+
+.cards__product-logo {
+  max-width: 411px;
+  width: 100%;
+  height: 420px;
+  @media(max-width: 998px) {
+   height: 250px;
+   max-width: 151px;
+  }
+  
+}
+.cards__product-title {
+  max-width: 350px;
+  min-height: 60px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  @media(max-width: 998px) {
+    font-size: 18px;
+  }
+}
+.cards__product-text {
+  max-width: 300px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  min-height: 300px;
+  @media(max-width: 998px) {
+
+  }
+}
+.cards__product-price {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  @media(max-width: 998px) {
+   font-size: 14px;
+  }
+}
+.cards__product-btn {
+  font-weight: 400;
+  font-size: 24px;
+  color: #f0f0f0;
+  background: #222;
+  border-radius: 15px;
+  padding: 12px 80px;
+ @media(max-width: 998px) {
+  font-size: 18px;
+ }
 }
