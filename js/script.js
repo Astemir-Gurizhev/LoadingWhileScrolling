@@ -17,7 +17,7 @@ const testimonials = async () => {
       data.map(el => {
         const testimonialsRow = document.querySelector(".testimonials__row");
         const testimonialsPost = document.createElement("div");
-        testimonialsPost.textContent = el.text;
+        testimonialsPost.innerHTML = el.text;
         testimonialsPost.className = "testimonials__post";
         testimonialsRow.appendChild(testimonialsPost);
       });
@@ -28,6 +28,43 @@ const testimonials = async () => {
   
   testimonials();
 
+
+
+// const maskRegex = /^\+7 \(\d{3}\) \d{3} \d{2}-\d{2}$/;
+const cartFormBtn = document.querySelector('.cart__form-btn');
+
+// Обработчик клика на кнопку "заказать"
+cartFormBtn.addEventListener('click', (event) => {
+  // Получаем значение инпута с номером телефона
+  const phoneNumberInput = document.querySelector('.cart__form-input');
+  const phoneNumberValue = phoneNumberInput.value;
+  const phoneRegex = /^(\+7|8)\s?\(?\d{3}\)?\s?\d{3}\s?(-)?\s?\d{2}\s?(-)?\s?\d{2}$/;
+
+  // Проверяем соответствие значения номера телефона регулярному выражению
+  if (!phoneRegex.test(phoneNumberValue)) {
+    // В случае ошибки устанавливаем класс "error" для инпута
+    phoneNumberInput.classList.add('error');
+    
+    // Предотвращаем отправку формы
+    event.preventDefault();
+  } else {
+    // В случае успеха убираем класс "error" для инпута
+    phoneNumberInput.classList.remove('error');
+  }
+});
+
+  // Обработчик события ввода текста в поле
+  const phoneInput = document.querySelector('.cart__form-input');
+  phoneInput.addEventListener('input', () => {
+    // Вызываем функцию проверки введенного значения
+    validateInput(phoneInput);
+  });
+
+
+
+// =============================================================
+
+  
 let currentPage = 1;
 const pageSize = 20;
 let isLoading = false;

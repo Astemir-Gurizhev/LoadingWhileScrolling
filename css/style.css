@@ -23,7 +23,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   animation: 2s spin infinite linear;
 }
 .done {
@@ -32,12 +32,12 @@ body {
 }
 @keyframes spin {
   from {
-      transform: translate(-50%,-50%) rotate(0deg);
-  } to {
-      transform: translate(-50%,-50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-
 
 .title {
   margin-bottom: 105px;
@@ -60,10 +60,10 @@ body {
   margin-bottom: 243px;
 }
 .testimonials__post {
- 
+  min-height: 400px;
   margin-inline: 10px;
   background: #d9d9d9;
-  max-width: 468px;
+  max-width: 300px;
   width: 100%;
   padding: 27px;
   border-radius: 20px;
@@ -79,6 +79,54 @@ body {
   }
 }
 
+.cart {
+  margin-bottom: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 13px;
+  border-radius: 15px;
+  background: #d9d9d9;
+}
+.cart__title {
+  font-weight: 400;
+  font-size: 36px;
+  color: #000;
+}
+.cart__form {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.cart__form-input {
+  background: #222;
+  border-radius: 15px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 36px;
+  color: #f0f0f0;
+}
+.cart__form-input::placeholder {
+  font-weight: 400;
+  font-size: 36px;
+  color: #f0f0f0;
+}
+.cart__form-btn {
+  background: #222;
+  border-radius: 15px;
+  padding: 12px 57px;
+  font-weight: 400;
+  font-size: 36px;
+  color: #f0f0f0;
+}
+
+
+.error {
+  border: 2px solid red;
+}
+
 
 .cards__row {
   display: flex;
@@ -87,7 +135,6 @@ body {
   flex-wrap: wrap;
 }
 .cards__product {
- 
   max-width: 401px;
   width: 100%;
   background: #d9d9d9;
@@ -97,18 +144,16 @@ body {
   align-items: center;
   gap: 20px;
   padding: 10px;
-  
 }
 
 .cards__product-logo {
   max-width: 411px;
   width: 100%;
   height: 420px;
-  @media(max-width: 998px) {
-   height: 250px;
-   max-width: 151px;
+  @media (max-width: 998px) {
+    height: 250px;
+    max-width: 151px;
   }
-  
 }
 .cards__product-title {
   max-width: 350px;
@@ -118,7 +163,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: #000;
-  @media(max-width: 998px) {
+  @media (max-width: 998px) {
     font-size: 18px;
   }
 }
@@ -128,8 +173,7 @@ body {
   font-size: 14px;
   color: #000;
   min-height: 300px;
-  @media(max-width: 998px) {
-
+  @media (max-width: 998px) {
   }
 }
 .cards__product-price {
@@ -137,8 +181,8 @@ body {
   font-size: 18px;
   color: #000;
   font-weight: bold;
-  @media(max-width: 998px) {
-   font-size: 14px;
+  @media (max-width: 998px) {
+    font-size: 14px;
   }
 }
 .cards__product-btn {
@@ -148,7 +192,7 @@ body {
   background: #222;
   border-radius: 15px;
   padding: 12px 80px;
- @media(max-width: 998px) {
-  font-size: 18px;
- }
+  @media (max-width: 998px) {
+    font-size: 18px;
+  }
 }
