@@ -1,3 +1,22 @@
+const testimonials = async () => {
+    try {
+      const response = await fetch("http://o-complex.com:1337/reviews");
+      const data = await response.json();
+  
+      data.map(el => {
+        const testimonialsRow = document.querySelector(".testimonials__row");
+        const testimonialsPost = document.createElement("div");
+        testimonialsPost.textContent = el.text;
+        testimonialsPost.className = "testimonials__post";
+        testimonialsRow.appendChild(testimonialsPost);
+      });
+    } catch (error) {
+      console.error("Ошибка при получении отзывов:", error);
+    }
+  };
+  
+  testimonials();
+
 let currentPage = 1;
 const pageSize = 20;
 let isLoading = false;
